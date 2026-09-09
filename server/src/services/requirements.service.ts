@@ -672,6 +672,14 @@ function extractDepartment(
     ) ||
     containsKeyword(
       message,
+      "mens",
+    ) ||
+    containsKeyword(
+      message,
+      "men's",
+    ) ||
+    containsKeyword(
+      message,
       "man",
     ) ||
     containsKeyword(

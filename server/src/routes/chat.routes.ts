@@ -132,11 +132,7 @@ function buildFallbackRecommendationMessage(
     ? ` These alternatives start from ${startingPrice}.`
     : "";
 
-  return (
-    `That exact combination isn't available right now, but I have a few close Tech-Tailor options${selectionContext} that are worth considering.` +
-    priceText +
-    " Here are the best alternatives I can show you."
-  );
+  return "Stylist picks based on your choices so far.";
 }
 
 function removeNullRequirements(

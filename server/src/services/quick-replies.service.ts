@@ -1458,13 +1458,26 @@ export function getQuickReplies(
 
   if (
     expectedField === "department" &&
-    (
-      normalizeValue(requirements.category)
-        .includes("suit") ||
-      [
-        "custom_design",
-      ].includes(workflow)
-    )
+    normalizeValue(requirements.category)
+      .includes("suit")
+  ) {
+    return [
+      option(
+        "Shop Men",
+        "I am shopping for Mens Suits",
+      ),
+      option(
+        "Shop Women",
+        "I am shopping for Women Suits",
+      ),
+    ];
+  }
+
+  if (
+    expectedField === "department" &&
+    [
+      "custom_design",
+    ].includes(workflow)
   ) {
     return (
       commonQuickReplies.department ?? []

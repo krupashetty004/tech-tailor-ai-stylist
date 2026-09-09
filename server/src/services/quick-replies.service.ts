@@ -1458,9 +1458,13 @@ export function getQuickReplies(
 
   if (
     expectedField === "department" &&
-    [
-      "custom_design",
-    ].includes(workflow)
+    (
+      normalizeValue(requirements.category)
+        .includes("suit") ||
+      [
+        "custom_design",
+      ].includes(workflow)
+    )
   ) {
     return (
       commonQuickReplies.department ?? []

@@ -378,6 +378,17 @@ export function determineNextStep(
       );
     }
 
+    if (
+      normalizeValue(requirements.category)
+        .includes("suit")
+    ) {
+      return createStep(
+        "department",
+        "Is the suit for Men or Women?",
+        "discover_department",
+      );
+    }
+
     return createStep(
       "department",
       "Who are you shopping for?",
